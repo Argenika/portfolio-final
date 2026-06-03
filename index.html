@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Angelina Lepeshko · Full-Stack Developer</title>
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+ 
+<!-- ── CURSOR PERSONALIZADO ── -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-follower" id="cursor-follower"></div>
+ 
+<!-- ── LOADER ── -->
+<div class="loader" id="loader">
+  <div class="loader-text">
+    <span>A</span><span>.</span><span>L</span><span>e</span><span>p</span><span>e</span><span>s</span><span>h</span><span>k</span><span>o</span>
+  </div>
+  <div class="loader-bar"><div class="loader-fill" id="loader-fill"></div></div>
+</div>
+ 
+<!-- ── NAV ── -->
+<nav id="navbar">
+  <div class="nav-logo">A<span class="logo-dot">.</span>Lepeshko</div>
+  <ul class="nav-links" id="nav-menu">
+    <li><a href="#proyectos">Proyectos</a></li>
+    <li><a href="#experiencia">Experiencia</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+  </ul>
+  <div class="nav-right">
+    <div class="nav-lang">
+      <button class="lang-btn active" data-lang="es">ES</button>
+      <button class="lang-btn" data-lang="en">EN</button>
+    </div>
+    <a class="nav-cv" href="assets/cv.pdf" target="_blank">CV →</a>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+ 
+<!-- ══════════════════════════════
+     HERO
+══════════════════════════════ -->
+<section class="hero" id="inicio">
+ 
+  <!-- Orbes de fondo animados -->
+  <div class="hero-orb orb-1"></div>
+  <div class="hero-orb orb-2"></div>
+  <div class="hero-orb orb-3"></div>
+ 
+  <!-- Grilla decorativa -->
+  <div class="hero-grid"></div>
+ 
+  <div class="hero-inner">
+ 
+    <div class="hero-left">
+      <!-- Foto -->
+      <div class="hero-photo-wrap" data-tilt>
+        <div class="hero-photo">
+          <!-- <img src="assets/foto.jpg" alt="Angelina"> -->
+          <div class="photo-placeholder">
+            <span class="photo-initials">AL</span>
+          </div>
+          <div class="photo-ring ring-1"></div>
+          <div class="photo-ring ring-2"></div>
+        </div>
+        <div class="photo-badge">
+          <span class="badge-dot"></span>
+          <span data-es="Disponible" data-en="Available">Disponible</span>
+        </div>
+      </div>
+    </div>
+ 
+    <div class="hero-right">
+      <div class="hero-tag reveal-up" data-delay="0">
+        <span class="tag-line"></span>
+        <span data-es="Full-Stack Developer · Valencia" data-en="Full-Stack Developer · Valencia">Full-Stack Developer · Valencia</span>
+      </div>
+ 
+      <h1 class="hero-name">
+        <span class="name-line reveal-up" data-delay="100">Angelina</span>
+        <span class="name-line italic reveal-up" data-delay="200">Lepeshko</span>
+      </h1>
+ 
+      <p class="hero-bio reveal-up" data-delay="300">
+        <span data-es="Desarrolladora con" data-en="Developer with">Desarrolladora con</span>
+        <strong data-es="+500h de prácticas reales" data-en="+500h real-world practice">+500h de prácticas reales</strong>
+        <span data-es="en IA y automatización. Lingüista trilingüe con" data-en="in AI and automation. Trilingual linguist with">en IA y automatización. Lingüista trilingüe con</span>
+        <strong data-es="7 años de experiencia" data-en="7 years experience">7 años de experiencia</strong>.
+      </p>
+ 
+      <div class="hero-langs reveal-up" data-delay="400">
+        <span class="lang-chip">🇷🇺 <span data-es="Nativa" data-en="Native">Nativa</span></span>
+        <span class="lang-chip">🇪🇸 C1</span>
+        <span class="lang-chip">🇬🇧 B1</span>
+      </div>
+ 
+      <div class="hero-btns reveal-up" data-delay="500">
+        <a class="btn-main" href="#proyectos">
+          <span data-es="Ver proyectos" data-en="View projects">Ver proyectos</span>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a class="btn-ghost" href="#contacto">
+          <span data-es="Contactar" data-en="Contact">Contactar</span>
+        </a>
+      </div>
+    </div>
+  </div>
+ 
+  <!-- Scroll indicator -->
+  <div class="scroll-hint">
+    <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+    <span>Scroll</span>
+  </div>
+</section>
+ 
+<!-- ══════════════════════════════
+     STATS — STICKY COUNTER
+══════════════════════════════ -->
+<section class="stats-section">
+  <div class="stats-inner">
+    <div class="stat-item" data-count="500" data-suffix="+">
+      <div class="stat-num"><span class="count-num">0</span><span>+</span></div>
+      <div class="stat-lbl" data-es="Horas de prácticas" data-en="Practice hours">Horas de prácticas</div>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item" data-count="3" data-suffix="">
+      <div class="stat-num"><span class="count-num">0</span></div>
+      <div class="stat-lbl" data-es="Idiomas dominados" data-en="Languages mastered">Idiomas dominados</div>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item" data-count="7" data-suffix="">
+      <div class="stat-num"><span class="count-num">0</span></div>
+      <div class="stat-lbl" data-es="Años de experiencia" data-en="Years experience">Años de experiencia</div>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item" data-count="5" data-suffix="+">
+      <div class="stat-num"><span class="count-num">0</span><span>+</span></div>
+      <div class="stat-lbl" data-es="Proyectos reales" data-en="Real projects">Proyectos reales</div>
+    </div>
+  </div>
+</section>
+ 
+<!-- ══════════════════════════════
+     PROYECTOS
+══════════════════════════════ -->
+<section class="section" id="proyectos">
+  <div class="section-header">
+    <div class="section-tag reveal-up">
+      <span class="tag-num">01</span>
+      <span data-es="Proyectos seleccionados" data-en="Selected projects">Proyectos seleccionados</span>
+    </div>
+    <h2 class="section-title reveal-up" data-delay="100" data-es="Proyectos" data-en="Projects">Proyectos</h2>
+  </div>
+
+  <div class="proj-list">
+
+<a class="proj-item proj-bg orbit" href="https://orbitspace.vercel.app" target="_blank">
+
+  <div class="proj-item-left">
+    <span class="proj-item-num">01</span>
+    <div>
+      <span class="proj-item-tag">TFG · 2025</span>
+      <h3 class="proj-item-title">OrbitSpace</h3>
+    </div>
+  </div>
+
+  <div class="proj-item-right">
+    <div class="proj-item-stack">
+      <span>React</span><span>FastAPI</span><span>MySQL</span><span>IA</span>
+    </div>
+    <div class="proj-item-arrow">↗</div>
+  </div>
+
+  <div class="proj-item-desc">
+    Plataforma full-stack para gestión de satélites y misiones espaciales con asistente IA integrado y autenticación JWT.
+  </div>
+
+</a>
+
+    <a class="proj-item" href="https://www.gatadelia.com" target="_blank">
+      <div class="proj-item-left">
+        <span class="proj-item-num">02</span>
+        <div>
+          <span class="proj-item-tag">Profesional · 2024</span>
+          <h3 class="proj-item-title">Adelia Backend</h3>
+        </div>
+      </div>
+      <div class="proj-item-right">
+        <div class="proj-item-stack">
+          <span>PHP</span><span>MySQL</span><span>WordPress</span><span>API IA</span>
+        </div>
+        <div class="proj-item-arrow">↗</div>
+      </div>
+      <div class="proj-item-desc">
+        Backend del asistente IA para PYMEs. Follow-up automático de leads, chat IA y SEO automatizado. Código en producción real.
+      </div>
+    </a>
+
+    <a class="proj-item" href="https://github.com/Argenika/scraper-ferias-wordpress" target="_blank">
+      <div class="proj-item-left">
+        <span class="proj-item-num">03</span>
+        <div>
+          <span class="proj-item-tag">Automatización · 2024</span>
+          <h3 class="proj-item-title">Scraper de Ferias</h3>
+        </div>
+      </div>
+      <div class="proj-item-right">
+        <div class="proj-item-stack">
+          <span>Python</span><span>Selenium</span><span>BeautifulSoup</span>
+        </div>
+        <div class="proj-item-arrow">↗</div>
+      </div>
+      <div class="proj-item-desc">
+        Scraper en Python puro para extracción automatizada de ferias sectoriales. Subida FTP e importación a WordPress sin duplicados.
+      </div>
+    </a>
+
+    <a class="proj-item" href="https://earth-risk-dashboard.vercel.app" target="_blank">
+      <div class="proj-item-left">
+        <span class="proj-item-num">04</span>
+        <div>
+          <span class="proj-item-tag">Backend · 2025</span>
+          <h3 class="proj-item-title">Earth Risk Dashboard</h3>
+        </div>
+      </div>
+      <div class="proj-item-right">
+        <div class="proj-item-stack">
+          <span>Python</span><span>FastAPI</span><span>SQLite</span><span>Leaflet.js</span>
+        </div>
+        <div class="proj-item-arrow">↗</div>
+      </div>
+      <div class="proj-item-desc">
+        Sistema de monitorización de amenazas globales en tiempo real. Mapa interactivo, alertas automáticas y worker en background.
+      </div>
+    </a>
+
+    <a class="proj-item" href="https://github.com/Argenika/pulse-monitoring-system" target="_blank">
+  <div class="proj-item-left">
+    <span class="proj-item-num">05</span>
+    <div>
+      <span class="proj-item-tag">Backend · Tiempo Real · 2025</span>
+      <h3 class="proj-item-title">Pulse Monitoring</h3>
+    </div>
+  </div>
+  <div class="proj-item-right">
+    <div class="proj-item-stack">
+      <span>Python</span><span>FastAPI</span><span>SQLite</span><span>Chart.js</span><span>Threading</span>
+    </div>
+    <div class="proj-item-arrow">↗</div>
+  </div>
+  <div class="proj-item-desc">
+    Sistema de monitorización en tiempo real de telemetría de la ISS. Worker en background, alertas automáticas y dashboard con gráfica de velocidad orbital.
+  </div>
+</a>
+
+  </div>
+</section>
+ 
+<!-- ══════════════════════════════
+     EXPERIENCIA
+══════════════════════════════ -->
+<section class="section section-dark" id="experiencia">
+  <div class="section-header">
+    <div class="section-tag reveal-up">
+      <span class="tag-num">02</span>
+      <span data-es="Trayectoria profesional" data-en="Professional journey">Trayectoria profesional</span>
+    </div>
+    <h2 class="section-title reveal-up" data-delay="100" data-es="Experiencia" data-en="Experience">Experiencia</h2>
+  </div>
+ 
+  <div class="timeline">
+    <div class="timeline-line"></div>
+ 
+    <div class="timeline-item reveal-left">
+      <div class="timeline-dot"></div>
+      <div class="timeline-date">2025 – 2026</div>
+      <div class="timeline-card">
+        <div class="tcard-header">
+          <h3 data-es="Desarrolladora Web · Prácticas DAW" data-en="Web Developer · DAW Internship">Desarrolladora Web · Prácticas DAW</h3>
+          <span class="tcard-company">Andreoli Studio · Valencia</span>
+        </div>
+        <p data-es="+500h en código en producción real. Scraping Python para base de datos de ferias, backend de Adelia con IA para gestión de leads y SEO automatizado. Trabajo autónomo con entregas reales." data-en="+500h in real production code. Python scraping for fair database, Adelia backend with AI for lead management and automated SEO. Autonomous work with real deliveries.">+500h en código en producción real. Scraping Python para base de datos de ferias, backend de Adelia con IA para gestión de leads y SEO automatizado.</p>
+        <div class="tcard-tags"><span>Python</span><span>PHP</span><span>MySQL</span><span>IA</span></div>
+      </div>
+    </div>
+ 
+    <div class="timeline-item reveal-right">
+      <div class="timeline-dot"></div>
+      <div class="timeline-date">2025 – 2026</div>
+      <div class="timeline-card">
+        <div class="tcard-header">
+          <h3 data-es="FP Grado Superior — DAW" data-en="Higher Vocational Training — Web Dev">FP Grado Superior — DAW</h3>
+          <span class="tcard-company">Universidad Europea · Valencia</span>
+        </div>
+        <p data-es="Desarrollo de Aplicaciones Web. HTML/CSS/JS, PHP, MySQL, React, Python, FastAPI, metodologías ágiles y despliegue en producción." data-en="Web Application Development. HTML/CSS/JS, PHP, MySQL, React, Python, FastAPI, agile methodologies and production deployment.">Desarrollo de Aplicaciones Web. HTML/CSS/JS, PHP, MySQL, React, Python, FastAPI, metodologías ágiles y despliegue.</p>
+        <div class="tcard-tags"><span>React</span><span>FastAPI</span><span>Git</span><span>Vercel</span></div>
+      </div>
+    </div>
+ 
+    <div class="timeline-item reveal-left">
+      <div class="timeline-dot"></div>
+      <div class="timeline-date">2018 – 2026</div>
+      <div class="timeline-card">
+        <div class="tcard-header">
+          <h3 data-es="Profesora de Español Online" data-en="Online Spanish Teacher">Profesora de Español Online</h3>
+          <span class="tcard-company">Freelance · Internacional</span>
+        </div>
+        <p data-es="7 años enseñando español a alumnos de todas las edades. Especializada en estudiantes de habla rusa e inglesa. Gestión autónoma en 3 idiomas." data-en="7 years teaching Spanish to students of all ages. Specialized in Russian and English-speaking students. Autonomous management in 3 languages.">7 años enseñando español a alumnos de todas las edades. Especializada en estudiantes de habla rusa e inglesa.</p>
+        <div class="tcard-tags"><span>🇷🇺 RU</span><span>🇪🇸 ES</span><span>🇬🇧 EN</span></div>
+      </div>
+    </div>
+ 
+    <div class="timeline-item reveal-right">
+      <div class="timeline-dot"></div>
+      <div class="timeline-date">2018 – 2022</div>
+      <div class="timeline-card">
+        <div class="tcard-header">
+          <h3 data-es="Grado en Traducción e Interpretación" data-en="Degree in Translation & Interpreting">Grado en Traducción e Interpretación</h3>
+          <span class="tcard-company" data-es="Kazan Federal University · Rusia" data-en="University · Russia">Universidad · Rusia</span>
+        </div>
+        <p data-es="Titulada en lingüística ES · EN · RU. Traducción técnica, interpretación simultánea y comunicación intercultural." data-en="Linguistics degree ES · EN · RU. Technical translation, simultaneous interpreting and intercultural communication.">Titulada en lingüística ES · EN · RU. Traducción técnica, interpretación simultánea y comunicación intercultural.</p>
+        <div class="tcard-tags"><span>Lingüística</span><span>Traducción</span><span>Interpretación</span></div>
+      </div>
+    </div>
+ 
+  </div>
+</section>
+ 
+<!-- ══════════════════════════════
+     SKILLS — APPLE STYLE
+══════════════════════════════ -->
+<section class="section" id="skills">
+  <div class="section-header">
+    <div class="section-tag reveal-up">
+      <span class="tag-num">03</span>
+      <span data-es="Tecnologías y habilidades" data-en="Technologies & skills">Tecnologías y habilidades</span>
+    </div>
+    <h2 class="section-title reveal-up" data-delay="100">Skills</h2>
+  </div>
+
+  <!-- BLOQUES PRINCIPALES -->
+  <div class="skills-grid">
+
+    <div class="skill-block reveal-scale">
+      <div class="skill-block-header">
+        <span class="skill-block-icon"></span>
+        <h3>Backend</h3>
+      </div>
+      <div class="skill-tags">
+        <span class="stag stag-main">Python</span>
+        <span class="stag stag-main">FastAPI</span>
+        <span class="stag">PHP</span>
+         <span class="stag stag-main">Java</span>
+        <span class="stag">MySQL</span>
+        <span class="stag">SQLite</span>
+        <span class="stag">SQLAlchemy</span>
+        <span class="stag">REST APIs</span>
+        <span class="stag">JWT</span>
+        <span class="stag">Threading</span>
+      </div>
+    </div>
+
+    <div class="skill-block reveal-scale" data-delay="100">
+      <div class="skill-block-header">
+        <span class="skill-block-icon"></span>
+        <h3>Frontend</h3>
+      </div>
+      <div class="skill-tags">
+        
+        <span class="stag stag-main">React</span>
+        <span class="stag stag-main">JavaScript</span>
+        <span class="stag">HTML5</span>
+        <span class="stag">CSS3</span>
+        <span class="stag">Angular</span>
+        <span class="stag">Tailwind</span>
+        <span class="stag">Leaflet.js</span>
+        <span class="stag">Chart.js</span>
+      </div>
+    </div>
+
+    <div class="skill-block reveal-scale" data-delay="200">
+      <div class="skill-block-header">
+        <span class="skill-block-icon"></span>
+        <h3>Tools</h3>
+      </div>
+      <div class="skill-tags">
+        <span class="stag stag-main">Git / GitHub</span>
+        <span class="stag stag-main">Docker</span>
+        <span class="stag stag-main">Selenium</span>
+        <span class="stag">Vercel</span>
+        <span class="stag">Render</span>
+        <span class="stag">WordPress</span>
+        <span class="stag">Pandas</span>
+        <span class="stag">BeautifulSoup</span>
+        <span class="stag">Scrum</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- FILA INFERIOR -->
+  <div class="skills-bottom">
+
+    <!-- IDIOMAS -->
+    <div class="skill-block-sm reveal-up">
+      <div class="skill-block-header">
+        <span class="skill-block-icon"></span>
+        <h3 data-es="Idiomas" data-en="Languages">Idiomas</h3>
+      </div>
+      <div class="lang-row">
+        <div class="lang-row-item">
+          <span class="lang-row-flag"></span>
+          <span class="lang-row-name" data-es="Ruso" data-en="Russian">Ruso</span>
+          <span class="lang-row-level" data-es="Nativa" data-en="Native">Nativa</span>
+        </div>
+        <div class="lang-row-divider"></div>
+        <div class="lang-row-item">
+          <span class="lang-row-flag"></span>
+          <span class="lang-row-name" data-es="Español" data-en="Spanish">Español</span>
+          <span class="lang-row-level">C1</span>
+        </div>
+        <div class="lang-row-divider"></div>
+        <div class="lang-row-item">
+          <span class="lang-row-flag"></span>
+          <span class="lang-row-name">English</span>
+          <span class="lang-row-level">B1</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- SOFT SKILLS -->
+    <div class="skill-block-sm reveal-up" data-delay="150">
+      <div class="skill-block-header">
+        <span class="skill-block-icon"></span>
+        <h3>Soft Skills</h3>
+      </div>
+   <div class="soft-chips">
+  <span data-es="Pensamiento analítico" data-en="Analytical thinking">Pensamiento analítico</span>
+  <span data-es="Resolución de problemas complejos" data-en="Complex problem solving">Resolución de problemas complejos</span>
+  <span data-es="Aprendizaje autónomo y rápido" data-en="Self-directed fast learner">Aprendizaje autónomo y rápido</span>
+  <span data-es="Comunicación técnica efectiva" data-en="Effective technical communication">Comunicación técnica efectiva</span>
+  <span data-es="Adaptabilidad a entornos cambiantes" data-en="Adaptability to changing environments">Adaptabilidad a entornos cambiantes</span>
+  <span data-es="Trabajo en entornos internacionales" data-en="International teamwork">Trabajo en entornos internacionales</span>
+</div>
+    </div>
+
+  </div>
+</section>
+<!-- ══════════════════════════════
+     CONTACTO
+══════════════════════════════ -->
+<section class="section section-dark contact-section" id="contacto">
+ 
+  <div class="contact-orb"></div>
+ 
+  <div class="section-header">
+    <div class="section-tag reveal-up">
+      <span class="tag-num">04</span>
+      <span data-es="Hablemos" data-en="Let's talk">Hablemos</span>
+    </div>
+    <h2 class="section-title reveal-up" data-delay="100" data-es="Contacto" data-en="Contact">Contacto</h2>
+  </div>
+ 
+  <div class="contact-grid">
+    <div class="contact-left reveal-left">
+      <p class="contact-big">
+        <span data-es="¿Tienes un proyecto?" data-en="Have a project?">¿Tienes un proyecto?</span><br>
+        <em data-es="Cuéntame." data-en="Tell me.">Cuéntame.</em>
+      </p>
+      <p class="contact-sub" data-es="Disponible para Valencia, Madrid o remoto. Busco mi primera oportunidad en empresa tecnológica." data-en="Available for Valencia, Madrid or remote. Looking for my first opportunity in a tech company.">Disponible para Valencia, Madrid o remoto. Busco mi primera oportunidad en empresa tecnológica.</p>
+      <div class="contact-links">
+        <a href="mailto:angelalepeshko560@gmail.com" class="clink">
+          <div class="clink-icon">✉</div>
+          <div class="clink-text">
+            <span class="clink-label">Email</span>
+            <span class="clink-val">angelalepeshko560@gmail.com</span>
+          </div>
+        </a>
+        <a href="https://linkedin.com/in/angelina-lepeshko-b9a410329/" target="_blank" class="clink">
+          <div class="clink-icon">in</div>
+          <div class="clink-text">
+            <span class="clink-label">LinkedIn</span>
+            <span class="clink-val">angelina-lepeshko</span>
+          </div>
+        </a>
+        <a href="https://github.com/Argenika" target="_blank" class="clink">
+          <div class="clink-icon">gh</div>
+          <div class="clink-text">
+            <span class="clink-label">GitHub</span>
+            <span class="clink-val">Argenika</span>
+          </div>
+        </a>
+      </div>
+    </div>
+ 
+    <form class="contact-form reveal-right" id="contact-form">
+      <div class="f-row">
+        <div class="f-group">
+          <label class="f-label" data-es="Nombre" data-en="Name">Nombre</label>
+          <input class="f-input" type="text" name="nombre" required>
+        </div>
+        <div class="f-group">
+          <label class="f-label">Email</label>
+          <input class="f-input" type="email" name="email" required>
+        </div>
+      </div>
+      <div class="f-group">
+        <label class="f-label" data-es="Mensaje" data-en="Message">Mensaje</label>
+        <textarea class="f-ta" name="mensaje" rows="5" required></textarea>
+      </div>
+      <button class="f-btn" type="submit">
+        <span data-es="Enviar mensaje" data-en="Send message">Enviar mensaje</span>
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </form>
+  </div>
+</section>
+ 
+<footer>
+  <div class="footer-inner">
+    <span>© 2025 Angelina Lepeshko</span>
+    <span>📍 Valencia, España</span>
+  </div>
+</footer>
+ 
+<script src="js/main.js"></script>
+
+<div id="hover-panel" class="proj-hover-panel orbit">
+  <div class="proj-hover-panel-inner">
+    <div class="proj-hover-bg"></div>
+    <div class="proj-hover-num">01</div>
+    <div class="proj-hover-emoji">🛰️</div>
+    <div class="proj-hover-name">OrbitSpace</div>
+    <div class="proj-hover-type">React · FastAPI · MySQL</div>
+  </div>
+</div>
+</body>
+</html>
