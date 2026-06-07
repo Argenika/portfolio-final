@@ -1,6 +1,3 @@
-// ═══════════════════════════════════════════════
-// ANGELINA LEPESHKO · main.js v3
-// ═══════════════════════════════════════════════
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -138,24 +135,35 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ── FORMULARIO ──
   const form = document.getElementById('contact-form');
-  form?.addEventListener('submit', e => {
+  form?.addEventListener('submit', async e => {
     e.preventDefault();
     const btn = form.querySelector('.f-btn, .f-submit');
-    if (!btn) return;
     const lang = document.documentElement.getAttribute('data-lang') || 'es';
+    const data = new FormData(form);
 
-    btn.textContent = lang === 'en' ? '✓ Message sent!' : '✓ ¡Mensaje enviado!';
-    btn.style.background = '#16A34A';
-    btn.style.borderColor = '#16A34A';
-    btn.style.color = '#fff';
+    try {
+      const res = await fetch('https://formspree.io/f/mojzeobn', {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      });
 
-    setTimeout(() => {
-      btn.textContent = lang === 'en' ? 'Send message →' : 'Enviar mensaje →';
-      btn.style.background = '';
-      btn.style.borderColor = '';
-      btn.style.color = '';
-      form.reset();
-    }, 3200);
+      if (res.ok) {
+        btn.textContent = lang === 'en' ? '✓ Message sent!' : '✓ ¡Mensaje enviado!';
+        btn.style.background = '#16A34A';
+        btn.style.borderColor = '#16A34A';
+        btn.style.color = '#fff';
+        form.reset();
+        setTimeout(() => {
+          btn.textContent = lang === 'en' ? 'Send message →' : 'Enviar mensaje →';
+          btn.style.background = '';
+          btn.style.borderColor = '';
+          btn.style.color = '';
+        }, 3200);
+      }
+    } catch (err) {
+      console.error(err);
+    }
   });
 
   // ── LOADER HIDE ──
@@ -219,6 +227,16 @@ document.addEventListener('DOMContentLoaded', () => {
       })();
     }
   });
+
+  // ── GITHUB BUTTONS ──
+  document.querySelectorAll('.proj-item-gh').forEach(btn => {
+    btn.addEventListener('click', e => {
+      e.preventDefault();
+      e.stopPropagation();
+      window.open(btn.dataset.gh, '_blank');
+    });
+  });
+
 
 });
 
