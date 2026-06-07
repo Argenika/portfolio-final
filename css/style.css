@@ -1,8 +1,4 @@
-/* ═══════════════════════════════════════════════════════════
-   ANGELINA LEPESHKO · PORTFOLIO v3 — DEFINITIVO
-   Fuentes: Cormorant Garamond + JetBrains Mono + Outfit
-   Paleta:  #141215 base · #C8A96E dorado · #EDE8E2 nieve
-═══════════════════════════════════════════════════════════ */
+
 
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap');
 /* ── TOKENS ── */
@@ -230,7 +226,7 @@ a { text-decoration:none; color:inherit; }
 /* ── Hero layout ── */
 .hero-inner {
   position:relative; z-index:1;
-  display:grid; grid-template-columns:360px 1fr;  /* foto más ancha */
+  display:grid; grid-template-columns:360px 1fr; 
   align-items:center; gap:72px;
   max-width:1280px; margin:0 auto; width:100%;
 }
@@ -239,7 +235,7 @@ a { text-decoration:none; color:inherit; }
 .hero-photo-wrap { position:relative; }
 
 .hero-photo {
-  width:310px; height:400px;             /* más grande */
+  width:310px; height:400px;             
   position:relative;
   border:1px solid rgba(212,135,74,.22);
   box-shadow:
@@ -1116,4 +1112,24 @@ footer { background:var(--ink); border-top:1px solid var(--border2); padding:28p
 .proj-item {
   position: relative;
 }
-
+.proj-item-gh {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 50%;
+  font-size: 11px;
+  color: rgba(255,255,255,0.5);
+  text-decoration: none;
+  transition: all 0.2s;
+  margin-right: 8px;
+}
+.proj-item-gh:hover {
+  border-color: rgba(255,255,255,0.7);
+  color: #fff;
+}
+.hero-photo img ~ .photo-placeholder {
+  display: none;
+}
