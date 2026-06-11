@@ -61,6 +61,12 @@ document.addEventListener('DOMContentLoaded', () => {
           if (el.name === 'mensaje') el.placeholder = 'Cuéntame en qué puedo ayudarte...';
         }
       });
+      document.querySelectorAll('.lang-es').forEach(el => {
+        el.style.display = lang === 'es' ? '' : 'none';
+      });
+      document.querySelectorAll('.lang-en').forEach(el => {
+        el.style.display = lang === 'en' ? '' : 'none';
+      });
       document.documentElement.setAttribute('data-lang', lang);
     });
   });
@@ -191,6 +197,7 @@ document.addEventListener('DOMContentLoaded', () => {
     { num: '03', name: 'Scraper de Ferias', type: 'Python · Selenium', bg: 'rgba(20,50,30,.95)' },
     { num: '04', name: 'Earth Risk Dashboard', type: 'FastAPI · SQLite · Leaflet', bg: 'url("img/risk.png") center/cover no-repeat' },
     { num: '05', name: 'Pulse Monitoring', type: 'FastAPI · SQLite · Chart.js', bg: 'rgba(20,10,50,.95)' },
+    { num: '06', name: 'AutoStart AI Bot', type: 'Python · Telegram API · OpenAI · MySQL', bg: 'rgba(40,15,10,.95)' },
   ];
 
   let panelX = 0, panelY = 0, targetX = 0, targetY = 0;
