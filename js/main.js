@@ -198,6 +198,7 @@ document.addEventListener('DOMContentLoaded', () => {
     { num: '04', name: 'Earth Risk Dashboard', type: 'FastAPI · SQLite · Leaflet', bg: 'url("img/risk.png") center/cover no-repeat' },
     { num: '05', name: 'Pulse Monitoring', type: 'FastAPI · SQLite · Chart.js', bg: 'rgba(20,10,50,.95)' },
     { num: '06', name: 'AutoStart AI Bot', type: 'Python · Telegram API · OpenAI · MySQL', bg: 'rgba(40,15,10,.95)' },
+    { num: '07', name: 'Mission Control Dashboard', type: 'Java · Spring Boot · PostgreSQL · React · Docker', bg: 'rgba(10,20,60,.95)', url: 'https://mission-control-frontend-0dx7.onrender.com', github: 'https://github.com/Argenika/mission-control-dashboard', desc: 'Plataforma full-stack de monitorización de telemetría satelital en tiempo real con backend en Spring Boot, PostgreSQL y frontend en React con visualización de datos y alertas automáticas.' }
   ];
 
   let panelX = 0, panelY = 0, targetX = 0, targetY = 0;
