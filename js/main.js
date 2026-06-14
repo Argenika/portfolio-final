@@ -44,12 +44,26 @@ document.addEventListener('DOMContentLoaded', () => {
   // ── IDIOMA ──
   document.querySelectorAll('.lang-btn').forEach(btn => {
     btn.addEventListener('click', () => {
+
       const lang = btn.dataset.lang;
+
+      const cvLink = document.getElementById('cv-link');
+
+      if (cvLink) {
+        if (lang === 'en') {
+          cvLink.href = 'assets/cv_en.pdf';
+        } else {
+          cvLink.href = 'assets/cv_es.pdf';
+        }
+      }
+
       document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
+
       document.querySelectorAll('[data-es][data-en]').forEach(el => {
         el.textContent = el.dataset[lang] || el.textContent;
       });
+
       document.querySelectorAll('input[placeholder], textarea[placeholder]').forEach(el => {
         if (lang === 'en') {
           if (el.name === 'nombre') el.placeholder = 'Your name';
@@ -61,12 +75,15 @@ document.addEventListener('DOMContentLoaded', () => {
           if (el.name === 'mensaje') el.placeholder = 'Cuéntame en qué puedo ayudarte...';
         }
       });
+
       document.querySelectorAll('.lang-es').forEach(el => {
         el.style.display = lang === 'es' ? '' : 'none';
       });
+
       document.querySelectorAll('.lang-en').forEach(el => {
         el.style.display = lang === 'en' ? '' : 'none';
       });
+
       document.documentElement.setAttribute('data-lang', lang);
     });
   });
